@@ -11,6 +11,9 @@ class App extends Component {
     let windowPixelDensity = window.devicePixelRatio;
     let windowWidth = windowWidthDP * windowPixelDensity;
     let windowHeight = windowHeightDP * windowPixelDensity;
+    let pixelDepth = window.screen.pixelDepth;
+    let colorDepth = window.screen.colorDepth;
+    let orientation = window.screen.orientation;
     let userAgent = navigator.userAgent;
 
     return (
@@ -38,6 +41,15 @@ class App extends Component {
         </p>
         <p>
           Window Width: {windowWidth}
+        </p>
+        <p>
+          Orientation: {orientation}
+        </p>
+        <p>
+          Color Depth: {colorDepth}
+        </p>
+        <p>
+          Pixel Depth: {pixelDepth}
         </p>
         <p>
           User Agent: {userAgent}
