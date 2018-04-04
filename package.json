@@ -1,8 +1,10 @@
 {
   "name": "device-metrics",
+  "author": "Ryan Lafferty",
+  "email": "rlafferty1@hotmail.com",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://RyanLafferty.github.io/device-metrics",
+  "homepage": "http://ryanlafferty.github.io/device-metrics",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.3.1",
