@@ -6,11 +6,15 @@ class App extends Component {
   renderDeviceMetrics() {
     let windowWidthDP = window.outerWidth;
     let windowHeightDP = window.outerHeight;
-    let screenWidth = window.screen.width;
-    let screenHeight = window.screen.height;
+    let windowInnerWidthDP = window.innerWidth;
+    let windowInnerHeightDP = window.innerHeight;
+    let screenWidthDP = window.screen.width;
+    let screenHeightDP = window.screen.height;
     let windowPixelDensity = window.devicePixelRatio;
     let windowWidth = windowWidthDP * windowPixelDensity;
     let windowHeight = windowHeightDP * windowPixelDensity;
+    let screenWidth = screenWidthDP * windowPixelDensity;
+    let screenHeight = screenHeightDP * windowPixelDensity;
     let pixelDepth = window.screen.pixelDepth;
     let colorDepth = window.screen.colorDepth;
     // let orientation = window.screen.orientation;
@@ -25,6 +29,12 @@ class App extends Component {
           Window Height: {windowHeight}
         </p>
         <p>
+          Screen Width: {screenWidth}
+        </p>
+        <p>
+          Screen Height: {screenHeight}
+        </p>
+        <p>
           Window Pixel Density: {windowPixelDensity}
         </p>
         <p>
@@ -34,10 +44,16 @@ class App extends Component {
           Window Height DP: {windowHeightDP}
         </p>
         <p>
-          Screen Width: {screenWidth}
+          Window Inner Width DP: {windowInnerWidthDP}
         </p>
         <p>
-          Screen Height: {screenHeight}
+          Window Inner Height DP: {windowInnerHeightDP}
+        </p>
+        <p>
+          Screen Width DP: {screenWidthDP}
+        </p>
+        <p>
+          Screen Height DP: {screenHeightDP}
         </p>
         <p>
           Color Depth: {colorDepth}
