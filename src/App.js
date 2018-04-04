@@ -1,18 +1,59 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  renderDeviceMetrics() {
+    let windowWidthDP = window.outerWidth;
+    let windowHeightDP = window.outerHeight;
+    let screenWidth = window.screen.width;
+    let screenHeight = window.screen.height;
+    let windowPixelDensity = window.devicePixelRatio;
+    let windowWidth = windowWidthDP * windowPixelDensity;
+    let windowHeight = windowHeightDP * windowPixelDensity;
+    let userAgent = navigator.userAgent;
+
+    return (
+      <div>
+        <p>
+          Window Width: {windowWidth}
+        </p>
+        <p>
+          Window Height: {windowHeight}
+        </p>
+        <p>
+          Window Pixel Density: {windowPixelDensity}
+        </p>
+        <p>
+          Window Width DP: {windowWidthDP}
+        </p>
+        <p>
+          Window Height DP: {windowHeightDP}
+        </p>
+        <p>
+          Screen Width: {screenWidth}
+        </p>
+        <p>
+          Screen Width: {screenHeight}
+        </p>
+        <p>
+          Window Width: {windowWidth}
+        </p>
+        <p>
+          User Agent: {userAgent}
+        </p>
+      </div>
+    );
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Device Metrics</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="App-intro">
+          {this.renderDeviceMetrics()}
+        </div>
       </div>
     );
   }
